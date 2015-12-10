@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>T6E2</title>
+   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+   <%= csrf_meta_tags %>
+</head>
+<body>
+   <!-- Menú -->
+   <nav>
+      <ul>
+         <li> <%= link_to_unless_current "Inicio", inicio_path %> </li>
+         <li> <%= link_to_unless_current "Quienes somos", quienes_path %> </li>
+         <li> <%= link_to_unless_current "Presupuesto", presupuesto_path %> </li>
+         <li> <%= link_to_unless_current "Usuario", usuario_path %> </li>
+      </ul>
+   </nav>
+
+   <%= yield %>
+
+</body>
+</html>
